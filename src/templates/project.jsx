@@ -35,7 +35,7 @@ export default class Project extends Component {
                     <Text
                       lineHeight="1.5"
                       margin="0 0 30px"
-                      key={Math.random()}
+                      // key={Math.random()}
                     >
                       {p}
                     </Text>
@@ -54,7 +54,12 @@ export default class Project extends Component {
         <Wrapper>
           <Flex padding="105px 0 85px" wrap="true">
             {photos.map(img => {
-              return <ImageBlock key={Math.random()} bgImg={img.publicURL} />
+              return (
+                <ImageBlock
+                  // key={Math.random()}
+                  bgImg={img.publicURL}
+                />
+              )
             })}
           </Flex>
         </Wrapper>
