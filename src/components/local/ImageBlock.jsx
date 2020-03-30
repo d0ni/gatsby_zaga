@@ -13,9 +13,10 @@ export default class ImageBlock extends Component {
       align-items: center;
       width: 33%;
       height: 270px;
-      background-repeat: no-repeat;
+      position: relative;
+      /* background-repeat: no-repeat;
       background-size: cover;
-      background-image: url(${bgImg});
+      background-image: url(${bgImg}); */
 
       & > div {
         display: none;
@@ -25,11 +26,18 @@ export default class ImageBlock extends Component {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        z-index: 10;
       }
     `
 
     return (
       <Block>
+        <img
+          style={{ position: "absolute", top: 0, left: 0, zIndex: 0 }}
+          src={bgImg}
+          alt=""
+        />
         <div>
           {title ? <H2 margin="0 0 40px 0">{title}</H2> : ""}
           {href ? <ReadMore href={href} /> : ""}
