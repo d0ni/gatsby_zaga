@@ -82,7 +82,7 @@ export default class FormContainer extends Component {
 
     return (
       // <Flex justify="space-between" wrap width={width}>
-      <Form action="send" data-netlify="true" width={width}>
+      <Form name="request" method="POST" netlify width={width}>
         <Input name="name" placeholder="Name"></Input>
         <Input name="E-mail" placeholder="E-mail"></Input>
         <Input name="Company" placeholder="Company"></Input>
