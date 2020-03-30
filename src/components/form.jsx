@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
-// import { Flex } from "../utils/const"
-
 const Input = styled.input`
   width: 48%;
   background-color: #373737;
@@ -81,8 +79,13 @@ export default class FormContainer extends Component {
     const { width } = this.props
 
     return (
-      // <Flex justify="space-between" wrap width={width}>
-      <Form name="request" method="POST" netlify width={width}>
+      <Form
+        action="send"
+        name="request"
+        method="POST"
+        data-netlify="true"
+        width={width}
+      >
         <Input name="name" placeholder="Name"></Input>
         <Input name="E-mail" placeholder="E-mail"></Input>
         <Input name="Company" placeholder="Company"></Input>
@@ -90,7 +93,6 @@ export default class FormContainer extends Component {
         <TextArea name="Description" placeholder="Description"></TextArea>
         <Send type="submit">Send</Send>
       </Form>
-      // </Flex>
     )
   }
 }
