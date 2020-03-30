@@ -1,0 +1,158 @@
+@import "./font.scss";
+
+body,
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 434px;
+
+  .logo-title {
+    font-size: 0.75em;
+    color: #ffffff;
+    margin-top: 11px;
+  }
+
+  .header-bg {
+    background-image: url(../assets/image/rectangle.svg);
+  }
+
+  .header-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 135px;
+  }
+
+  .header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style-type: none;
+
+    &-item {
+      margin-left: 60px;
+    }
+
+    &-item-link {
+      font-size: 1em;
+      font-weight: bold;
+      text-align: justify;
+      color: #fff;
+
+      font-stretch: normal;
+      font-style: normal;
+    }
+  }
+
+  .gray-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 305px;
+    height: 304px;
+    background-color: #2b2b2b;
+  }
+
+  .gray-square-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 205px;
+    height: 396px;
+    background-color: #2b2b2b;
+  }
+
+  .gray-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(
+      to bottom,
+      rgba(43, 43, 43, 0.6),
+      #2b2b2b
+    );
+  }
+}
+
+footer {
+  background-color: #373737;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 135px;
+
+    &-col {
+      flex: 1;
+
+      &:nth-child(3) {
+        justify-content: flex-end;
+        display: flex;
+      }
+    }
+  }
+
+  .footer-social {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > a:nth-child(2) {
+      margin-left: 49px;
+      margin-right: 49px;
+    }
+  }
+
+  .footer-text {
+    font-size: 0.75em;
+    color: #fff;
+
+    & > span {
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  background-color: #2b2b2b;
+}
